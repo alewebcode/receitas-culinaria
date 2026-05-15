@@ -83,7 +83,9 @@ src/
 ```
 
 ```
-O schema do banco é criado automaticamente no primeiro start do Docker via `backend/src/scripts/script.sql`, criando o banco `teste_receitas_rg_sistemas` com as tabelas `usuarios`, `categorias` e `receitas`.
+O schema do banco é criado automaticamente no primeiro start do Docker via `backend/src/scripts/script.sql`,
+criando o banco `teste_receitas_rg_sistemas` com as tabelas `usuarios`, `categorias` e `receitas`.
+
 ```
 
 ## API Endpoints
@@ -126,7 +128,8 @@ Sobe o MySQL e o backend em containers. O schema é criado automaticamente no pr
 cd backend
 
 # 2. Crie o arquivo .env com as variáveis necessárias
-#    (MYSQL_ROOT_PASSWORD, MYSQL_DATABASE, MYSQL_PASSWORD, JWT_SECRET) - MYSQL_DATABASE precisa ser o mesmo nome do schema que é teste_receitas_rg_sistemas.
+#    (MYSQL_ROOT_PASSWORD, MYSQL_DATABASE, MYSQL_PASSWORD, JWT_SECRET)
+#     MYSQL_DATABASE precisa ser o mesmo nome do schema que é teste_receitas_rg_sistemas.
 
 # 3. Suba os containers
 docker compose up
