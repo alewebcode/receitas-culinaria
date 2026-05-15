@@ -1,4 +1,4 @@
-import { CreateRecipeUseCase } from "./create-recipe";
+import { CreateRecipeUseCase } from "../recipes/create-recipe";
 
 describe("CreateRecipeUseCase", () => {
   it("should create a new recipe", async () => {

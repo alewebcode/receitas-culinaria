@@ -1,4 +1,4 @@
-import { GetMeUseCase } from "./get-me";
+import { GetMeUseCase } from "../users/get-me";
 
 describe("GetMeUseCase", () => {
   it("should return user without password", async () => {

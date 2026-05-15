@@ -1,4 +1,4 @@
-import { GetRecipeUseCase } from "./get-recipe";
+import { GetRecipeUseCase } from "../recipes/get-recipe";
 
 describe("GetRecipeUseCase", () => {
   it("should get a recipe by id", async () => {

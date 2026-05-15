@@ -1,4 +1,4 @@
-import { AuthenticateUseCase } from "./authenticate";
+import { AuthenticateUseCase } from "../users/authenticate";
 
 describe("AuthenticateUseCase", () => {
   it("should authenticate a user with valid credentials", async () => {
@@ -35,5 +35,9 @@ describe("AuthenticateUseCase", () => {
       }),
     ).rejects.toThrow("Usuário ou senha inválidos");
     expect(usersRepository.findUserByLogin).toHaveBeenCalledWith("invaliduser");
+  });
+
+  beforeAll(() => {
+    process.env.JWT_SECRET = "test-secret";
   });
 });

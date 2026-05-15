@@ -1,4 +1,4 @@
-import { DeleteRecipeUseCase } from "./delete-recipe";
+import { DeleteRecipeUseCase } from "../recipes/delete-recipe";
 
 describe("DeleteRecipeUseCase", () => {
   it("should delete an existing recipe", async () => {

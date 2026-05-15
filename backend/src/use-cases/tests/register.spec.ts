@@ -1,4 +1,4 @@
-import { RegisterUseCase } from "./register";
+import { RegisterUseCase } from "../users/register";
 
 describe("RegisterUseCase", () => {
   it("should create a new user", async () => {

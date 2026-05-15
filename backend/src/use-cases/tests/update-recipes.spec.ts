@@ -1,4 +1,4 @@
-import { UpdateRecipesUseCase } from "./update-recipes";
+import { UpdateRecipesUseCase } from "../recipes/update-recipes";
 
 describe("UpdateRecipeUseCase", () => {
   it("should update an existing recipe", async () => {
