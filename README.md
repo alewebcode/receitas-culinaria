@@ -170,8 +170,8 @@ O frontend ficará disponível em `http://localhost:5173` (porta padrão do Vite
 
 ## Testes unitários com Jest
 
-Dentro de backend/src/use-cases/ contem os arquivos \*.spec.ts
-Para a execução basta rodar npm run test
+- Dentro de backend/src/use-cases/ contem os arquivos \*.spec.ts
+- Para a execução basta rodar npm run test
 
 ---
 
