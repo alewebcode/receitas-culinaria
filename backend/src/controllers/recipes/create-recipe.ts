@@ -1,7 +1,8 @@
 import { Request, Response } from "express";
-import { makeCreateRecipesUseCase } from "../use-cases/factories/make-create-recipes-use-case";
+
 import z from "zod";
-import { mapRecipe } from "../utils/recipe-mapper";
+import { makeCreateRecipesUseCase } from "../../use-cases/factories/make-create-recipes-use-case";
+import { mapRecipe } from "../../utils/recipe-mapper";
 
 const createRecipeSchema = z.object({
   categoryId: z.number(),

@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
-import { makeRegisterUseCase } from "../use-cases/factories/make-register-use-case";
+
 import z from "zod";
+import { makeRegisterUseCase } from "../../use-cases/factories/make-register-use-case";
 
 const registerSchema = z.object({
   name: z.string().min(3),

@@ -1,6 +1,6 @@
 import { Request, Response } from "express";
-import { makeUpdateRecipesUseCase } from "../use-cases/factories/make-update-recipes-use-case";
 import z from "zod";
+import { makeUpdateRecipesUseCase } from "../../use-cases/factories/make-update-recipes-use-case";
 
 const updateRecipeSchema = z.object({
   categoryId: z.number().optional(),

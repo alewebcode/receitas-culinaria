@@ -1,6 +1,6 @@
-import { UsersRepository } from "../repositories/users-repository";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
+import { UsersRepository } from "../../repositories/users-repository";
 
 export class AuthenticateUseCase {
   constructor(private userRepository: UsersRepository) {}

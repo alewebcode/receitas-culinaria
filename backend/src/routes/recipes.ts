@@ -1,10 +1,10 @@
-import { CreateRecipe } from "../controllers/create-recipe";
 import { Router } from "express";
-import { ListRecipes } from "../controllers/list-recipes";
-import { UpdateRecipe } from "../controllers/update-recipe";
-import { DeleteRecipe } from "../controllers/delete-recipe";
-import { GetRecipeController } from "../controllers/get-recipe";
-import { PrintRecipeController } from "../controllers/print-recipe";
+import { CreateRecipe } from "../controllers/recipes/create-recipe";
+import { ListRecipes } from "../controllers/recipes/list-recipes";
+import { UpdateRecipe } from "../controllers/recipes/update-recipe";
+import { DeleteRecipe } from "../controllers/recipes/delete-recipe";
+import { GetRecipeController } from "../controllers/recipes/get-recipe";
+import { PrintRecipeController } from "../controllers/recipes/print-recipe";
 
 const recipesRouter = Router();
 

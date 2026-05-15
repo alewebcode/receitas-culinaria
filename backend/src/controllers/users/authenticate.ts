@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { makeAuthenticateUseCase } from "../use-cases/factories/make-authenticate-use-case";
+import { makeAuthenticateUseCase } from "../../use-cases/factories/make-authenticate-use-case";
 
 export async function Authenticate(req: Request, res: Response) {
   const { login, password } = req.body;

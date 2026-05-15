@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { makeDeleteRecipesUseCase } from "../use-cases/factories/make-delete-recipes-use-case";
+import { makeDeleteRecipesUseCase } from "../../use-cases/factories/make-delete-recipes-use-case";
 
 export async function DeleteRecipe(req: Request, res: Response) {
   const { id } = req.params;

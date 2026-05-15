@@ -1,4 +1,4 @@
-import { RecipesRepository } from "../repositories/recipes-repository";
+import { RecipesRepository } from "../../repositories/recipes-repository";
 
 export class GetRecipeUseCase {
   constructor(private recipesRepository: RecipesRepository) {}

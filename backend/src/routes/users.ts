@@ -1,7 +1,7 @@
-import { GetMe } from "../controllers/get-me";
-import { Register } from "../controllers/register";
 import { Router } from "express";
 import { verifyToken } from "../middlewares/verify-token";
+import { Register } from "../controllers/users/register";
+import { GetMe } from "../controllers/users/get-me";
 
 const usersRouter = Router();
 

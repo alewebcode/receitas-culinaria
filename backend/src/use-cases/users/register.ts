@@ -1,5 +1,5 @@
 import { hash } from "bcryptjs";
-import { UsersRepository } from "../repositories/users-repository";
+import { UsersRepository } from "../../repositories/users-repository";
 
 export class RegisterUseCase {
   constructor(private userRepository: UsersRepository) {}

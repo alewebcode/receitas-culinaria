@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { makePrintRecipeUseCase } from "../use-cases/factories/make-print-recipe-use-case";
+import { makePrintRecipeUseCase } from "../../use-cases/factories/make-print-recipe-use-case";
 
 export async function PrintRecipeController(req: Request, res: Response) {
   const { id } = req.params;

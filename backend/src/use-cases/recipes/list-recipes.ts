@@ -1,5 +1,5 @@
-import { Recipe } from "../entities/recipe";
-import { RecipesRepository } from "../repositories/recipes-repository";
+import { Recipe } from "../../entities/recipe";
+import { RecipesRepository } from "../../repositories/recipes-repository";
 
 export class ListRecipesUseCase {
   constructor(private recipesRepository: RecipesRepository) {}

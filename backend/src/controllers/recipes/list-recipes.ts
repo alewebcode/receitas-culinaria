@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { makeListRecipesUseCase } from "../use-cases/factories/make-list-recipes-use-case";
-import { makeSearchRecipesUseCase } from "../use-cases/factories/make-search-recipes-use-case";
-import { mapRecipes } from "../utils/recipe-mapper";
+import { makeSearchRecipesUseCase } from "../../use-cases/factories/make-search-recipes-use-case";
+import { mapRecipes } from "../../utils/recipe-mapper";
+import { makeListRecipesUseCase } from "../../use-cases/factories/make-list-recipes-use-case";
 
 export async function ListRecipes(req: Request, res: Response) {
   const { search } = req.query;

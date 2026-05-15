@@ -1,6 +1,5 @@
 import { MySQLRecipesRepository } from "../../repositories/mysql/mysql-recipes-repository";
-
-import { ListRecipesUseCase } from "../list-recipes";
+import { ListRecipesUseCase } from "../recipes/list-recipes";
 
 export function makeListRecipesUseCase() {
   const recipesRepository = new MySQLRecipesRepository();

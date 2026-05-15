@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { makeGetMeUseCase } from "../use-cases/factories/make-get-me-use-case";
+import { makeGetMeUseCase } from "../../use-cases/factories/make-get-me-use-case";
 
 export async function GetMe(req: Request, res: Response) {
   const { id } = (req as any).user;
