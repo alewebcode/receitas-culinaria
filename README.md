@@ -10,6 +10,7 @@ Aplicação web para gerenciamento de receitas de culinária, com cadastro de us
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Variáveis de Ambiente](#variáveis-de-ambiente)
 - [Como Executar](#como-executar)
+- [Testes](#testes-unitários-com-jest)
 
 ---
 
@@ -169,7 +170,8 @@ O frontend ficará disponível em `http://localhost:5173` (porta padrão do Vite
 
 ## Testes unitários com Jest
 
-Dentro de backend/src/use-cases/ contem os arquivos \*.spec.ts.Para a execução basta rodar npm run test
+Dentro de backend/src/use-cases/ contem os arquivos \*.spec.ts
+Para a execução basta rodar npm run test
 
 ---
 
