@@ -8,8 +8,6 @@ Aplicação web para gerenciamento de receitas de culinária, com cadastro de us
 - [Tecnologias](#tecnologias)
 - [Arquitetura](#arquitetura)
 - [Estrutura do Projeto](#estrutura-do-projeto)
-- [API Endpoints](#api-endpoints)
-- [Páginas do Frontend](#páginas-do-frontend)
 - [Variáveis de Ambiente](#variáveis-de-ambiente)
 - [Como Executar](#como-executar)
 
@@ -36,32 +34,30 @@ Funcionalidades principais:
 
 ### Backend
 
-| Tecnologia  
-| --------------------------------------------
-| Node.js 20  
-| Express 4  
-| TypeScript  
-| MySQL 8 + mysql2  
-| JSON Web Token (JWT)  
-| bcryptjs  
-| Zod  
-| Swagger (swagger-jsdoc + swagger-ui-express)
-| Docker + Docker Compose
+Tecnologia
+
+Node.js 20  
+Express 4  
+TypeScript  
+MySQL 8 + mysql2  
+JSON Web Token (JWT)  
+bcryptjs  
+Zod  
+Swagger (swagger-jsdoc + swagger-ui-express)
+Docker + Docker Compose
 
 ### Frontend
 
-| Tecnologia  
-| --------------
-| Vue 3  
-| Vite  
-| TypeScript  
-| Pinia  
-| Vue Router 5  
-| Tailwind CSS 4
-| Axios  
-| Zod  
-| jsPDF  
-| vue-sonner
+Vue 3  
+Vite  
+TypeScript  
+Pinia  
+Vue Router 5  
+Tailwind CSS 4
+Axios  
+Zod  
+jsPDF  
+vue-sonner
 
 ---
 
@@ -85,7 +81,9 @@ src/
 └── server.ts          # Entrada da aplicação (porta 3000)
 ```
 
-## O schema do banco é criado automaticamente no primeiro start do Docker via `backend/src/scripts/script.sql`, criando o banco `teste_receitas_rg_sistemas` com as tabelas `usuarios`, `categorias` e `receitas`.
+```
+O schema do banco é criado automaticamente no primeiro start do Docker via `backend/src/scripts/script.sql`, criando o banco `teste_receitas_rg_sistemas` com as tabelas `usuarios`, `categorias` e `receitas`.
+```
 
 ## API Endpoints
 
@@ -166,6 +164,14 @@ npm run dev
 ```
 
 O frontend ficará disponível em `http://localhost:5173` (porta padrão do Vite).
+
+---
+
+## Testes unitários com Jest
+
+Dentro de backend/src/use-cases/ contem os arquivos \*.spec.ts.Para a execução basta rodar npm run test
+
+---
 
 ## Requisitos
 
