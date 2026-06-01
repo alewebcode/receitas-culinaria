@@ -1,6 +1,6 @@
 # Desafio Receitas de Culinária
 
-Aplicação web para gerenciamento de receitas de culinária, com cadastro de usuários, autenticação JWT, listagem com busca, criação, edição, exclusão e impressão.
+Aplicação web para gerenciamento de receitas de culinária, com cadastro de usuários, autenticação JWT, listagem com busca, criação, edição, exclusão e impressão da receita.
 
 ## Sumário
 
