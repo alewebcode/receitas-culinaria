@@ -38,10 +38,13 @@ export class MySQLRecipesRepository implements RecipesRepository {
     };
   }
 
-  async findRecipeById(id: number): Promise<Recipe | undefined> {
+  async findRecipeById(
+    id: number,
+    userId: number,
+  ): Promise<Recipe | undefined> {
     const [rows] = await pool.execute<(Recipe & RowDataPacket)[]>(
-      "SELECT id, id_usuarios, id_categorias, nome, tempo_preparo_minutos, porcoes, modo_preparo, ingredientes FROM receitas WHERE id = ?",
-      [id],
+      "SELECT id, id_usuarios, id_categorias, nome, tempo_preparo_minutos, porcoes, modo_preparo, ingredientes FROM receitas WHERE id = ? and id_usuarios = ?",
+      [id, userId],
     );
 
     return rows[0];
@@ -54,11 +57,17 @@ export class MySQLRecipesRepository implements RecipesRepository {
 
     return rows;
   }
-  async deleteRecipe(id: number): Promise<void> {
-    await pool.execute("DELETE FROM receitas WHERE id = ?", [id]);
+  async deleteRecipe(id: number, userId: number): Promise<void> {
+    await pool.execute(
+      "DELETE FROM receitas WHERE id = ? and id_usuarios = ?",
+      [id, userId],
+    );
   }
   async updateRecipe(recipe: Recipe): Promise<void> {
-    const recipeToUpdate = await this.findRecipeById(recipe.id);
+    const recipeToUpdate = await this.findRecipeById(
+      recipe.id,
+      recipe.id_usuarios,
+    );
 
     if (!recipeToUpdate) {
       throw new Error("Receita não encontrada");

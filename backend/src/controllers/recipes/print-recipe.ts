@@ -3,11 +3,12 @@ import { makePrintRecipeUseCase } from "../../use-cases/factories/make-print-rec
 
 export async function PrintRecipeController(req: Request, res: Response) {
   const { id } = req.params;
+  const { id: userId } = (req as any).user;
 
   try {
     const printRecipeUseCase = makePrintRecipeUseCase();
 
-    const recipe = await printRecipeUseCase.execute(Number(id));
+    const recipe = await printRecipeUseCase.execute(Number(id), userId);
 
     if (!recipe) {
       return res.status(404).json({ message: "Receita não encontrada" });

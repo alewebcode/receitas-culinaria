@@ -4,11 +4,12 @@ import { mapRecipe } from "../../utils/recipe-mapper";
 
 export async function GetRecipeController(req: Request, res: Response) {
   const { id } = req.params;
+  const { id: userId } = (req as any).user;
 
   try {
     const getRecipeUseCase = makeGetRecipesUseCase();
 
-    const recipe = await getRecipeUseCase.execute(Number(id));
+    const recipe = await getRecipeUseCase.execute(Number(id), userId);
 
     if (!recipe) {
       return res.status(404).json({ message: "Receita não encontrada" });

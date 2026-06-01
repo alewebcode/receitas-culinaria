@@ -2,6 +2,7 @@ import { RecipesRepository } from "../../repositories/recipes-repository";
 
 interface UpdateRecipeRequest {
   id: number;
+  userId: number;
   categoryId?: number | undefined;
   name?: string | undefined;
   preparationTime?: number | undefined;
@@ -13,8 +14,8 @@ interface UpdateRecipeRequest {
 export class UpdateRecipesUseCase {
   constructor(private recipesRepository: RecipesRepository) {}
 
-  async execute({ id, ...data }: UpdateRecipeRequest) {
-    const recipe = await this.recipesRepository.findRecipeById(id);
+  async execute({ id, userId, ...data }: UpdateRecipeRequest) {
+    const recipe = await this.recipesRepository.findRecipeById(id, userId);
 
     if (!recipe) {
       throw new Error("Receita não encontrada");

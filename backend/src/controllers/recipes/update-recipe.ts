@@ -13,6 +13,7 @@ const updateRecipeSchema = z.object({
 
 export async function UpdateRecipe(req: Request, res: Response) {
   const { id } = req.params;
+  const { id: userId } = (req as any).user;
 
   const parsed = updateRecipeSchema.safeParse(req.body);
 
@@ -30,6 +31,7 @@ export async function UpdateRecipe(req: Request, res: Response) {
 
     const recipe = await updateRecipesUseCase.execute({
       id: Number(id),
+      userId,
       ...parsed.data,
     });
     return res.status(200).json(recipe);
