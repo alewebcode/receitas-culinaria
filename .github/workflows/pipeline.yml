@@ -26,3 +26,7 @@ jobs:
       - name: Run tests
         run: npm test
         working-directory: ./backend
+
+      - name: Deploy no Render
+        if: github.ref == 'refs/heads/master'
+        run: curl -X POST ${{ secrets.RENDER_DEPLOY_HOOK }}
